@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://osloum7bjouo"]
+
+[ext_resource type="PackedScene" uid="uid://hpnk351gm31t" path="res://entities/boxes/Box.tscn" id="1_wiw27"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qg522"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nvwsx"]
+radius = 5.03923
+
+[node name="common_1" type="Node3D"]
+transform = Transform3D(1.02081, 0, 0, 0, 1.02081, 0, 0, 0, 1.02081, 0, 0, 0)
+
+[node name="Box" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(1, 0, 0, 0, 0.0539705, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Box2" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.804953, 0, 0, 0, 0.0514982, 0, 0, 0, 0.715036, 0, -0.0501117, 0)
+
+[node name="Box8" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(1.08692, 0, 0, 0, 0.113541, 0, 0, 0, 2.47222, -0.41247, -0.0400829, -1.08698)
+
+[node name="Box7" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.613047, 0, 0, 0, 0.0864701, 0, 0, 0, 0.453853, -0.502661, 0.0329935, 0.300693)
+
+[node name="Box3" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.319173, 0, 0, 0, 0.133765, 0, 0, 0, 0.387098, 0, -0.135467, 0)
+
+[node name="Box4" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.547572, 0, 0, 0, -0.0637246, 0, 0, 0, 0.355149, 0.280443, 0.0541948, -0.432234)
+
+[node name="Box6" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.16444, 0, 0, 0, -0.0201176, 0, 0, 0, 0.239017, 0.240918, 0.0367261, 0.134466)
+
+[node name="Box5" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.299835, 0, 0, 0, 0.0357766, 0, 0, 0, 0.434376, -0.262589, 0.0284039, 0.0957021)
+
+[node name="Box11" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(-1.40088, 0.0781075, 0, -0.1028, -1.06438, 0, 0, 0, 0.980093, -0.740095, -0.803307, -2.20623)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-0.352378, -0.646864, -0.676311, 0.935408, -0.265857, -0.233094, -0.0290219, -0.714764, 0.698764, -0.027076, -0.34359, -0.655773)
+
+[node name="Box2" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.788545, -2.18741e-09, 0, 1.76881e-08, 0.0504484, 0, 0, 0, 0.70046, 0, -0.0490903, 0)
+
+[node name="Box8" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.692521, 0, 0, 0, 0.111227, 0, 0, 0, 1.31354, -0.404062, -0.0516746, -0.288934)
+
+[node name="Box7" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.60055, 0, 0, 0, 0.0847075, 0, 0, 0, 0.444602, -0.492415, 0.0323209, 0.294564)
+
+[node name="Box3" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.312667, 0, 0, 0, 0.131038, 0, 0, 0, 0.379207, 0, -0.132706, 0)
+
+[node name="Box4" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.53641, 0, 0, 0, -0.0624256, 0, 0, 0, 0.34791, 0.274726, 0.0530901, -0.423423)
+
+[node name="Box6" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.161088, 0, 0, 0, -0.0197075, 0, 0, 0, 0.234145, 0.236007, 0.0359775, 0.131725)
+
+[node name="Box5" parent="Node3D" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.293723, 0, 0, 0, 0.0350473, 0, 0, 0, 0.425522, -0.257236, 0.0278249, 0.0937513)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(0.821099, 0.0319761, -0.569889, -0.140936, 0.978873, -0.148137, 0.553112, 0.201953, 0.808258, -1.05255, -0.194265, 0)
+
+[node name="Box" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.979616, 0, 0, 0, 0.0528703, 0, 0, 0, 0.979616, 0, 0, 0)
+
+[node name="Box2" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.788545, 0, 0, 0, 0.0504484, 0, 0, 0, 0.70046, 0, -0.0490902, 0)
+
+[node name="Box8" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.692521, 0, 0, 0, 0.111227, 0, 0, 0, 1.31354, -0.404062, -0.0516746, -0.288934)
+
+[node name="Box7" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.60055, 0, 0, 0, 0.0847075, 0, 0, 0, 0.444602, -0.492415, 0.0323209, 0.294564)
+
+[node name="Box3" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.312667, 0, 0, 0, 0.131038, 0, 0, 0, 0.379207, 0, -0.132706, 0)
+
+[node name="Box4" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.53641, 0, 0, 0, -0.0624256, 0, 0, 0, 0.34791, 0.274726, 0.0530901, -0.423423)
+
+[node name="Box6" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.161088, 0, 0, 0, -0.0197075, 0, 0, 0, 0.234145, 0.236007, 0.0359775, 0.131725)
+
+[node name="Box5" parent="Node3D2" instance=ExtResource("1_wiw27")]
+transform = Transform3D(0.293723, 0, 0, 0, 0.0350473, 0, 0, 0, 0.425522, -0.257236, 0.0278249, 0.0937513)
+
+[node name="Ball" type="StaticBody3D" parent="."]
+transform = Transform3D(0.302, 0, 0, 0, 0.302, 0, 0, 0, 0.302, -0.554083, -1.50636, -1.26647)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ball"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("SphereMesh_qg522")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
+shape = SubResource("SphereShape3D_nvwsx")
+
+[node name="Box10" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(1, 0, 0, 0, 0.49552, 0.868596, 0, -0.868596, 0.49552, -0.369777, -0.348705, -2.55162)
+
+[node name="Box9" parent="." instance=ExtResource("1_wiw27")]
+transform = Transform3D(1, 0, 0, 0, 0.864731, 0.502235, 0, -0.502235, 0.864731, -1.62389, -0.309252, -1.24073)

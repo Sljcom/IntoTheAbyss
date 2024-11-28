@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dseamci7cepdc"]
+
+[ext_resource type="Script" path="res://ui/player_game_ui/PlayerGameUI.gd" id="1_mpn0p"]
+[ext_resource type="PackedScene" uid="uid://d0a52kwwrp27l" path="res://ui/player_game_ui/labels/DepthMeter.tscn" id="1_qagy4"]
+
+[node name="GamePlayerUI" type="CanvasLayer"]
+script = ExtResource("1_mpn0p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Dashes" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="DepthMeter" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" parent="HBoxContainer/DepthMeter" instance=ExtResource("1_qagy4")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4.0
+offset_right = 122.0
+offset_bottom = 112.0
+
+[node name="DashesContainer" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Test" type="Node" parent="."]
+
+[node name="isGliderActive" type="Label" parent="Test"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "glider: off"

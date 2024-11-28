@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://csg3e1k5l738m"]
+
+[ext_resource type="Script" path="res://scenes/world/World.gd" id="1_3hbjd"]
+[ext_resource type="PackedScene" uid="uid://biim10omcbef3" path="res://player/Player.tscn" id="2_jdvms"]
+[ext_resource type="PackedScene" uid="uid://dseamci7cepdc" path="res://ui/player_game_ui/PlayerGameUI.tscn" id="4_6re65"]
+[ext_resource type="PackedScene" uid="uid://osloum7bjouo" path="res://entities/islands/common_1.tscn" id="4_thamn"]
+[ext_resource type="PackedScene" uid="uid://cv02j4egf1a72" path="res://scenes/world/Islands.tscn" id="5_35yit"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lrlc6"]
+sky_top_color = Color(0.439216, 0.556863, 1, 1)
+sky_horizon_color = Color(0.659804, 0.681373, 0.783333, 1)
+ground_bottom_color = Color(0.2, 0.168627, 0.133333, 1)
+ground_horizon_color = Color(0.659804, 0.681373, 0.783333, 1)
+
+[sub_resource type="Sky" id="Sky_8ovjw"]
+sky_material = SubResource("ProceduralSkyMaterial_lrlc6")
+
+[sub_resource type="Environment" id="Environment_meonh"]
+background_mode = 2
+sky = SubResource("Sky_8ovjw")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_energy = 0.13
+fog_density = 0.005
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_3hbjd")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_meonh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 6.76913, 0)
+light_color = Color(1, 1, 0.972549, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_jdvms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.586768, 0)
+
+[node name="StartingIslands" type="Node3D" parent="."]
+
+[node name="SpawnIsland" parent="StartingIslands" instance=ExtResource("4_thamn")]
+transform = Transform3D(19.9798, 0, 0, 0, 19.9798, 0, 0, 0, 19.9798, 2.23939, -3.28759, 1.45285)
+
+[node name="Islands" parent="." instance=ExtResource("5_35yit")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00781631, -0.00908899, 0.00568867)
+
+[node name="GamePlayerUI" parent="." instance=ExtResource("4_6re65")]
+
+[connection signal="dash_count_changed" from="Player" to="GamePlayerUI" method="_on_player_dash_count_changed"]
+[connection signal="dash_count_max_changed" from="Player" to="GamePlayerUI" method="_on_player_dash_count_max_changed"]
+[connection signal="dash_recharge_time_changed" from="Player" to="." method="_on_player_dash_recharge_time_changed"]
+[connection signal="dash_recharge_time_changed" from="Player" to="GamePlayerUI" method="_on_player_dash_recharge_time_changed"]
+[connection signal="glider_active_changed" from="Player" to="GamePlayerUI" method="_on_player_glider_active_changed"]
+[connection signal="position_changed" from="Player" to="Islands" method="_on_player_position_changed"]
+[connection signal="position_y_changed" from="Player" to="GamePlayerUI" method="_on_player_position_y_changed"]

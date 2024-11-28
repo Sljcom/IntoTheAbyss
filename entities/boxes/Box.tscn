@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://hpnk351gm31t"]
+
+[ext_resource type="Script" path="res://entities/boxes/Box.gd" id="1_4xdn4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d860f"]
+albedo_color = Color(0.588235, 0.760784, 1, 1)
+metallic = 0.49
+metallic_specular = 0.51
+
+[sub_resource type="BoxMesh" id="BoxMesh_d37th"]
+material = SubResource("StandardMaterial3D_d860f")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_64o62"]
+size = Vector3(9.93438, 10.1307, 9.95965)
+
+[node name="Box" type="Node3D"]
+script = ExtResource("1_4xdn4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_d37th")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_64o62")

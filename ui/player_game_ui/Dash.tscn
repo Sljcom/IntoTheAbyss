@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://qnhws2mnqonq"]
+
+[ext_resource type="Script" path="res://ui/player_game_ui/Dash.gd" id="1_qke6l"]
+
+[node name="Dash" type="Control"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_qke6l")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 1.0
+fill_mode = 3
+show_percentage = false
+
+[connection signal="ready" from="ProgressBar" to="." method="_on_progress_bar_ready"]
